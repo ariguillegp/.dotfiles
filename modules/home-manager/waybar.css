@@ -1,0 +1,61 @@
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "IosevkaTerm Nerd Font";
+  font-weight: bold;
+  font-size: 10px;
+  min-height: 0;
+}
+
+window#waybar {
+  background: #181818;
+  color: #cdd6f4;
+}
+
+tooltip {}
+
+#workspaces button {}
+
+#workspaces button.active {
+  color: #9ccfd8;
+}
+
+#workspaces button.focused {
+  color: #9ccfd8;
+}
+
+#workspaces button.urgent {}
+
+#workspaces button:hover {}
+
+#custom-language,
+#custom-updates,
+#custom-caffeine,
+#custom-weather,
+#window,
+#clock,
+#battery,
+#pulseaudio,
+#network,
+#workspaces,
+#backlight {}
+
+#workspaces {}
+
+#custom-caffeine {}
+
+#custom-updates {}
+
+#window {}
+
+#clock {}
+
+#network {}
+
+#pulseaudio {}
+
+#pulseaudio.microphone {}
+
+#battery {}
+
+#custom-endright {}

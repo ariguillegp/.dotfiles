@@ -1,0 +1,7 @@
+{
+  programs = {
+    eza = {
+      enableFishIntegration = true;
+    };
+  };
+}
