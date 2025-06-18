@@ -13,6 +13,13 @@
 
     includes = [
       {
+        condition = "gitdir:${identities.dotfiles.projDir}/**";
+        contents = {
+          user.email = "${identities.dotfiles.email}";
+          user.signingkey = "${identities.dotfiles.sshPubKey}";
+        };
+      }
+      {
         condition = "gitdir:${identities.personal.projDir}/**";
         contents = {
           user.email = "${identities.personal.email}";

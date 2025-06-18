@@ -4,6 +4,15 @@
     fullName = "Aristides Gonzalez";
     githubURL = "github.com";
 
+    dotfiles = {
+      email = "aristides@glezpol.com";
+      sshPrivKey = "/home/aristides/.ssh/id_rsa";
+      sshPubKey = "/home/aristides/.ssh/id_rsa.pub";
+      githubHost = "github.com-personal";
+      projDir = "/home/aristides/.dotfiles";
+      context = "personal";
+    };
+
     personal = {
       email = "aristides@glezpol.com";
       sshPrivKey = "/home/aristides/.ssh/id_rsa";
