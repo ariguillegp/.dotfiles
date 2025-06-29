@@ -92,6 +92,7 @@ in
         python311
         pre-commit
         rsync
+        ripgrep
         rofi-wayland # app launcher
         signal-desktop
         sof-firmware
