@@ -50,7 +50,6 @@ in
         bluez-alsa
         google-chrome
         curl
-        claude-code
         dig
         docker-compose
         dos2unix
@@ -88,6 +87,7 @@ in
         openssl
         pfetch
         pkgs-unstable.code-cursor
+        pkgs-unstable.claude-code
         playerctl
         python311
         pre-commit
@@ -102,7 +102,9 @@ in
         terraform
         tldr
         tree
+        typespec
         unzip
+        uv
         xfce.thunar
         xclip
         waybar

@@ -131,18 +131,18 @@
       exec-once = [
         "hyprctl setcursor Vanilla-DMZ-AA 12"
         "[workspace 1 silent] $terminal"
-        "[workspace 2 silent] $editor"
-        "[workspace 3 silent] $webBrowser"
-        "[workspace 4 silent] $fileManager"
-        "[workspace 5 silent] $messenger"
+        "[workspace 2 silent] $webBrowser"
+        "[workspace 3 silent] $messenger"
+        "[workspace 4 silent] $editor"
+        "[workspace 5 silent] $fileManager"
       ];
 
       windowrulev2 = [
         "workspace 1, class:^(com.mitchellh.ghostty)$"
-        "workspace 2, class:^(cursor)$"
-        "workspace 3, class:^(google-chrome)$"
-        "workspace 4, class:^(thunar)$"
-        "workspace 5, class:^(signal)$"
+        "workspace 2, class:^(google-chrome)$"
+        "workspace 3, class:^(signal)$"
+        "workspace 4, class:^(cursor)$"
+        "workspace 5, class:^(thunar)$"
       ];
 
       # Keybindings
@@ -158,6 +158,8 @@
           "$mod, L, exec, hyprlock"
           "$mod, R, exec, $menu"
           "$mod, E, exec, $fileManager"
+          "$mod, F, fullscreen, 0"
+          "$mod, Z, fullscreen, 1"
           "$mod, V, exec, togglefloating"
           "$mod, B, exec, $webBrowser"
           "$mod, P, exec, pseudo" # dwindle

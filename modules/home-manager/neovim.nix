@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, pkgs-unstable, ... }:
 
 {
   programs.neovim =
@@ -23,13 +23,21 @@
         jq-lsp
         shellcheck
         lazygit
-
         ripgrep
         xclip
         wl-clipboard
       ];
 
       plugins = with pkgs.vimPlugins; [
+        # Claude Code integration with dependencies
+        {
+          plugin = snacks-nvim;
+          config = toLua "require(\"snacks\").setup()";
+        }
+        {
+          plugin = pkgs-unstable.vimPlugins.claudecode-nvim;
+          config = toLuaFile ./config/nvim/plugins/claudecode.lua;
+        }
 
         # Git plugins
         vim-rhubarb
@@ -140,14 +148,15 @@
       ];
 
       extraLuaConfig = ''
+        ${builtins.readFile ./config/nvim/after/options.lua}
         ${builtins.readFile ./config/nvim/after/autocmds.lua}
         ${builtins.readFile ./config/nvim/after/colors.lua}
-        ${builtins.readFile ./config/nvim/after/keymaps.lua}
-        ${builtins.readFile ./config/nvim/after/options.lua}
-        ${builtins.readFile ./config/nvim/after/telescope.lua}
         ${builtins.readFile ./config/nvim/after/diagnostics.lua}
         ${builtins.readFile ./config/nvim/after/harpoon.lua}
+        ${builtins.readFile ./config/nvim/after/keymaps.lua}
         ${builtins.readFile ./config/nvim/after/lazygit.lua}
+        ${builtins.readFile ./config/nvim/after/telescope.lua}
+        ${builtins.readFile ./config/nvim/after/claudecode.lua}
       '';
     };
 }

@@ -180,10 +180,12 @@
       cat = "bat --paging=never --style=plain";
     };
     shellAbbrs = {
+      c = "claude";
+      C = "claude --dangerously-skip-permissions";
+      g = "git";
       k = "kubectl";
       v = "nvim";
       V = "sudo nvim";
-      g = "git";
     };
   };
 
