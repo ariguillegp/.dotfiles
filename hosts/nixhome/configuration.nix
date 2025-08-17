@@ -112,6 +112,9 @@
   # Enable touchpad support (enabled default in most desktopManager).
   services.libinput.enable = true;
 
+  # Enable acpilight for backlight control
+  hardware.acpilight.enable = true;
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -121,6 +124,7 @@
     git
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
+    brillo # Brightness control utility
     xdg-desktop-portal
     xdg-desktop-portal-gtk
     xdg-desktop-portal-hyprland
@@ -135,7 +139,7 @@
     users.aristides = {
       isNormalUser = true;
       initialPassword = "secret";
-      extraGroups = [ "wheel" "docker" "networkmanager" ]; # Enable ‘sudo’ for the user.
+      extraGroups = [ "wheel" "docker" "networkmanager" "video" ]; # Enable 'sudo' for the user.
     };
   };
 

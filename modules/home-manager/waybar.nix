@@ -53,8 +53,12 @@
         max-length = 10;
       };
       backlight = {
-        format = "󰖨  {}";
-        device = "acpi_video0";
+        format = "󰖨  {percent}%";
+        device = "intel_backlight";
+        on-scroll-up = "brillo -A 5";
+        on-scroll-down = "brillo -U 5";
+        on-click = "brillo -A 10";
+        on-click-right = "brillo -U 10";
       };
       network = {
         format = "󰖩  {essid}";
